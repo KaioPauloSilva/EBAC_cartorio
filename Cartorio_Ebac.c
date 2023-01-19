@@ -133,6 +133,8 @@ int main() //Função Principal a Primeira a Rodar
 
 	int opcao=0; //Definindo variaveis
 	int laco=1;
+	int laco2=1;
+	char retorno=0;
 
 	for(laco=1; laco=1;) { //Inicio do Looping
 
@@ -144,7 +146,8 @@ int main() //Função Principal a Primeira a Rodar
 		printf("Escolha a opção desejada do menu:\n\n");
 		printf("\t1 - Registrar Nomes\n\n");
 		printf("\t2 - Consultar Nomes\n\n");
-		printf("\t3 - Deletar Nomes\n\n\n");
+		printf("\t3 - Deletar Nomes\n\n");
+		printf("\t4 - Sair do Sistema\n\n\n");
 		printf("Opção: "); //Fim do menu
 
 		scanf("%d", &opcao); //Armazenando a escolha do usuario
@@ -164,6 +167,19 @@ int main() //Função Principal a Primeira a Rodar
 			case 3:
 			deletar();
 				break;
+				
+			case 4:
+			
+			printf("Voce tem certeza que quer sair do sistema?\n\nDigite 's' para sair do sistema : ");
+			scanf(" %c", &retorno);
+			while(retorno == 's' | retorno =='S' )
+			{
+				printf("\tVocê escolheu sair do sistema!\n\n");
+				system ("pause");
+				return 0;
+			}	
+            system("cls");
+			break;
 
 			default:
 				printf("Esta opção não esta disponivel!\n\n");
